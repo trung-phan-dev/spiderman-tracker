@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0c10" />
+    <meta name="description" content="Spidey Tracker — Spider-Man physique training program." />
+    <title>SPIDEY TRACKER // TRAINING PROTOCOL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scanlines" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Spidey Tracker home">
+        <span class="brand-mark">ST</span>
+        <span><strong>SPIDEY</strong><em>TRACKER</em></span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a class="active" href="#workout">WORKOUT LOG</a>
+        <a href="#protocol">PROTOCOL</a>
+        <a href="#rules">FIELD NOTES</a>
+      </nav>
+      <div class="header-status"><span class="live-dot"></span> SYSTEM ONLINE <span class="status-time" id="clock">00:00:00</span></div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="signal">//</span> PHYSICAL DEVELOPMENT PROGRAM <span class="red-line"></span></p>
+          <h1>BUILD THE<br /><span>SPIDEY</span> PHYSIQUE.</h1>
+          <p class="hero-intro">A system for building strength, speed, and body control. Choose a training day, complete each target, and track your progress.</p>
+          <a class="jump-link" href="#workout">OPEN TRAINING LOG <span>↘</span></a>
+        </div>
+        <div class="hero-visual" aria-label="Animated Spider-Man sprite">
+          <div class="coordinate">10.7769° N<br />106.7009° E</div>
+          <div class="web-ring ring-one"></div><div class="web-ring ring-two"></div><div class="web-ring ring-three"></div>
+          <div class="sprite-wrap"><div class="spidey-sprite"></div></div>
+          <div class="hero-caption"><span>SUBJECT 001</span><strong>AGILITY / STRENGTH</strong></div>
+        </div>
+      </section>
+
+      <section class="tracker-section" id="workout">
+        <div class="section-heading">
+          <div><p class="eyebrow">WEEKLY SCHEDULE // 01</p><h2>TRAINING LOG</h2></div>
+          <div class="week-progress"><span id="progressLabel">0 / 0 COMPLETED</span><div class="progress-track"><i id="progressBar"></i></div></div>
+        </div>
+
+        <div class="tracker-layout">
+          <aside class="day-rail" aria-label="Choose a training day" id="dayRail"></aside>
+          <div class="workout-content">
+            <div class="workout-toolbar"><div><span class="day-tag" id="dayTag">MONDAY // FRIDAY</span><h3 id="dayTitle">UPPER BODY // PULL FOCUS</h3></div><button class="ghost-btn" id="resetDay">RESET DAY ↺</button></div>
+            <div class="workout-grid" id="workoutGrid"></div>
+            <div class="session-note" id="sessionNote"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="calendar-section" id="calendar">
+        <div class="calendar-heading"><div><p class="eyebrow">MONTHLY MISSION LOG // 04</p><h2>TRAINING<br /><span>CALENDAR.</span></h2></div><div class="calendar-controls"><button id="prevMonth" aria-label="Previous month">←</button><strong id="monthLabel"></strong><button id="nextMonth" aria-label="Next month">→</button></div></div>
+        <div class="calendar-wrap"><div class="calendar-weekdays"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div><div class="calendar-grid" id="calendarGrid"></div></div>
+        <p class="calendar-tip"><span class="live-dot"></span> Click a date to mark a completed training day. Your monthly history is saved automatically.</p>
+      </section>
+
+      <section class="protocol" id="protocol">
+        <div class="protocol-intro"><p class="eyebrow">THE SPIDER PROTOCOL // 02</p><h2>KEEP MOVING.<br /><span>STAY SHARP.</span></h2><p>You do not need perfection. You need consistency. Every checked box adds another thread to your web.</p></div>
+        <div class="protocol-cards"><article><b>01</b><h3>CONTROL</h3><p>Keep your form clean. Stop 1–2 reps before failure on light sessions.</p></article><article><b>02</b><h3>PROGRESS</h3><p>Complete all target reps for two consecutive sessions? Add 1 rep to every set next week.</p></article><article><b>03</b><h3>RECOVER</h3><p>Sleep well, eat enough, and let your body adapt. Use the prescribed rest between sets.</p></article></div>
+      </section>
+
+      <section class="rules-section" id="rules"><div><p class="eyebrow">FIELD NOTES // 03</p><h2>REST IS PART<br />OF THE <span>MISSION.</span></h2></div><div class="rest-grid" id="restGrid"></div></section>
+    </main>
+
+    <div class="rest-toast" id="restToast" role="status" aria-live="polite"><span class="toast-mark">✦</span><div><strong>REST COMPLETE</strong><small id="toastMessage">Your next set is ready.</small></div><button id="dismissToast" aria-label="Dismiss notification">×</button></div>
+    <footer><span>SPIDEY TRACKER © 2026</span><span>TRAIN SMART // MOVE FAST // STAY HUMAN</span><span>BUILD 01.01</span></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
